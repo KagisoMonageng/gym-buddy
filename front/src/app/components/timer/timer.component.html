@@ -1,0 +1,18 @@
+<!-- <div class="flex flex-col text-white justify-center gap-3  place-items-center w-full h-36 fixed bottom-20"> -->
+  <div class="flex flex-col text-white justify-center gap-3  place-items-center w-full h-36 fixed bottom-10">
+
+  <p class="-mb-2 text-white">Set Seconds</p>
+  <input type="number" [placeholder]="timer" class="input border-none bg-transparent text-center text-white w-32 text-4xl h-fit font-bold"
+    [(ngModel)]="timer">
+
+  <div class="grid grid-cols-3 justify-items-center content-center w-full py-0.5">
+    <div class="flex flex-col text-white text-center justify-center -space-y-2 backdrop-blur-3xl   px-6 py-1 rounded-full">
+      <p class="">Time</p>
+      <p class="font-semibold">{{reset}} SEC</p>
+    </div>
+    <button *ngIf="showPause" class="btn btn-ghost bg-gray-600 text-white rounded-full btn-lg" (click)="pause()"><i class="fi fi-sr-pause"></i></button>
+    <button *ngIf="showPlay" class="btn btn-ghost bg-gray-600 text-white rounded-full btn-lg" (click)="play()"><i class="fi fi-sr-play"></i></button>
+    <button *ngIf="showStart" class="btn btn-ghost bg-gray-600 text-white rounded-full btn-lg" (click)="setTime(timer)"><i class="fi fi-sr-play"></i></button>
+    <p class="my-auto">{{msg}}</p>
+  </div>
+</div>
